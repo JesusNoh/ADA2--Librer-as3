@@ -20,10 +20,10 @@ def mostrar_menu_algoritmos_avanzados():
     print("7. Radix Sort (solo números no negativos)")
 
 def main():
-    numeros = []  # Inicializar la lista de números fuera del bucle
+    numeros = []
 
     while True:
-        if not numeros:  # Solo pedir números si la lista está vacía
+        if not numeros: 
             cantidad = int(input("Ingrese la cantidad de números a ordenar: "))
             for i in range(cantidad):
                 numero = int(input(f"Ingrese el número {i + 1}: "))
@@ -31,17 +31,15 @@ def main():
         else:
             usar_misma_cantidad = input("\n¿Desea usar la misma cantidad de números ingresados anteriormente? (s/n): ").strip().lower()
             if usar_misma_cantidad == 's':
-                pass  # Usar la lista existente
+                pass  
             else:
                 cantidad = int(input("Ingrese la nueva cantidad de números a ordenar: "))
-                numeros = []  # Reiniciar la lista
+                numeros = [] 
                 for i in range(cantidad):
                     numero = int(input(f"Ingrese el número {i + 1}: "))
                     numeros.append(numero)
 
-        # Mostrar menú de métodos directos
         mostrar_menu_algoritmos()
-        # Mostrar menú de métodos algorítmicos
         mostrar_menu_algoritmos_avanzados()
 
         opcion = int(input("Ingrese el número de la opción deseada: "))
